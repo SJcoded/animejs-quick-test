@@ -8,95 +8,16 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Anime.js</h1>
-    <section>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="./curtain-animation/html.js"></script> -->
     
-    <script>
-
-        let tl = anime.timeline({
-            easing: 'easeOutExpo',
-            duration: 1000,
-            loop: true
-        });
-
-        tl.add({
-            targets: 'section div',
-            backgroundColor: 'rgb(197, 197, 255)',
-            delay: anime.stagger(100)
-        })
-
-        tl.add({
-            targets: 'section div',
-            width: '90%',
-            delay: anime.stagger(100)
-        })
-
-        tl.add({
-            targets: 'h1',
-            top: '10%',
-            opacity: 1,
-            duration: 2000,
-            // delay: anime.stagger(100)
-        }, '-=1600')
-
-        let rotate = anime({
-            targets: 'section',
-            scaleY: '2',
-            scaleX: '2',
-            translateX: '40%',
-            rotate: '45deg',
-            duration: 5000,
-            autoplay: false,
-            
-        })
-        
-        // Make it rotate!
-        // document.querySelector('section').addEventListener('mouseenter', () => {
-        //     rotate.play();
-        // })
-    </script>
+    <!-- <script src="./curtain-animation/anime.js"></script> -->
+    <!-- <script src="./curtain-animation/vanilla.js"></script> -->
     
-    
-    
-    
-    
-    <!-- vanillajs attempt -->
-    <!-- <script>
+    <script src="check-animation/html.js"></script>
 
-        const delay = (time) => new Promise((resolve) => setTimeout(resolve, time));
 
-        let grids = document.querySelectorAll('div')
 
-        let num = 0;
 
-        grids.forEach(grid => {
-            delay(0).then(()=>{
-                setTimeout(() => {
-                    grid.style.backgroundColor = 'lightblue'
-                }, num += 100)
-            })
-            delay(500).then(()=>{
-                setTimeout(() => {
-                    grid.style.backgroundColor = 'rgb(228, 242, 255)'
-                    grid.style.width = '90%'
-
-                }, num += 100)
-            })
-            
-        })
-    </script> -->
 </body>
 </html>
