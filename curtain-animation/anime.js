@@ -6,7 +6,7 @@ let tl = anime.timeline({
 
 tl.add({
     targets: 'section div',
-    backgroundColor: 'rgb(197, 197, 255)',
+    backgroundColor: '#8035DC',
     delay: anime.stagger(100)
 })
 
