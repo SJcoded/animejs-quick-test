@@ -32,7 +32,6 @@ let rotate = anime({
     rotate: '45deg',
     duration: 5000,
     autoplay: false,
-    
 })
 
 // Make it rotate!
