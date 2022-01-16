@@ -1,7 +1,18 @@
+:root {
+  --bg: #0D1035;
+  --primary: #8035DC;
+  --accent: #FD4544;
+  --success: #0AC861;
+  --onDarkPrimary: #FFFFFF;
+  --onDarkSecondary: rgba(255, 255, 255, 0.6);
+  --layer1: rgba(255, 255, 255, 0.1);
+}
+
 body {
   margin: 0;
   height: 100vh;
   overflow: hidden;
+  background-color: var(--bg);
 }
 
 section {
@@ -12,7 +23,7 @@ section {
 }
 
 section div {
-  background-color: white;
+  background-color: var(--bg);
   height: 100vh;
 }
 
@@ -23,5 +34,24 @@ h1 {
   left: 12%;
   opacity: 0;
   z-index: 2;
+  color: white;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[40];
+      grid-template-columns: repeat(40, auto);
+  -ms-grid-rows: (auto)[10];
+      grid-template-rows: repeat(10, auto);
+  grid-gap: 3px;
+  min-width: 830px;
+}
+
+.grid-container .ripple-div {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: var(--primary);
 }
 /*# sourceMappingURL=main.css.map */
