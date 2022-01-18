@@ -66,7 +66,7 @@ h1 {
     margin: 80px;
 }
 
-.purple-credit-card{
+.purple-credit-card-float-in{
     width: 325px;
     height: 140px;
     background-color: var(--primary);
@@ -86,6 +86,37 @@ h1 {
 
         .main{
             font-size: 1.5em;
+            color: white;
+            font-weight: bold;
+        }
+
+        .sub{
+            font-size: 1em;
+            color: white;
+            font-weight: normal;
+        }
+    }
+}
+
+.purple-credit-card{
+    width: 325px;
+    height: 200px;
+    background-color: var(--primary);
+    display: flex;
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 20px;
+    transform: rotateX(25deg);
+
+    .main-text-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 20px;
+        margin-left: 20px;
+
+        .main{
+            font-size: 2.5em;
+            margin-bottom: 10px;
             color: white;
             font-weight: bold;
         }

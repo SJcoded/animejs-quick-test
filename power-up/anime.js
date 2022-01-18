@@ -1,4 +1,45 @@
-anime({
+let transferAmount = document.querySelector('.main')
+let availableFunds = document.querySelector('.sub')
+
+let balance = {
+    money: 5000,
+    available: 10000,
+}
+
+transferAmount.innerText = '$' + balance.money
+availableFunds.innerText = '$' + balance.available + ' Available'
+
+console.log(balance)
+
+const drop_balance = anime({
+  targets: balance,
+  money: "$0",
+  available: "$5000",
+  easing: 'easeInOutExpo',
+  round: 1,
+  update: function() {
+    transferAmount.innerText = balance.money
+    availableFunds.innerText = balance.available + ' Available'
+  },
+  autoplay: false,
+});
+
+const shrink_card = anime({
+  targets: '.purple-credit-card',
+  duration: 2000,
+  rotate:{
+    value: '2deg',
+    duration: 2000,
+    delay: 200,
+  },
+  translateY: {
+    value: '-30px',
+  },
+  height: '160px',
+  autoplay: false,
+})
+
+const animate_arrows = anime({
   targets: '.arrow',
 
     translateY: function(el, i, l) {
@@ -6,9 +47,20 @@ anime({
     },
 
   delay: anime.stagger(100),
-    loop: true,
-  direction: 'alternate',
+  direction: 'forwards',
+  autoplay: false,
 })
+
+
+
+const power_up = () => {
+
+  drop_balance.play()
+  shrink_card.play()
+  animate_arrows.play()
+}
+
+document.querySelector('.power-up').addEventListener('click', power_up)
 
 
 

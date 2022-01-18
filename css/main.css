@@ -88,7 +88,7 @@ h1 {
   margin: 80px;
 }
 
-.purple-credit-card {
+.purple-credit-card-float-in {
   width: 325px;
   height: 140px;
   background-color: var(--primary);
@@ -103,7 +103,7 @@ h1 {
           transform: rotateX(25deg);
 }
 
-.purple-credit-card .main-text-container {
+.purple-credit-card-float-in .main-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,8 +121,50 @@ h1 {
   margin-left: 20px;
 }
 
-.purple-credit-card .main-text-container .main {
+.purple-credit-card-float-in .main-text-container .main {
   font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+}
+
+.purple-credit-card-float-in .main-text-container .sub {
+  font-size: 1em;
+  color: white;
+  font-weight: normal;
+}
+
+.purple-credit-card {
+  width: 325px;
+  height: 200px;
+  background-color: var(--primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 20px;
+          box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 20px;
+  -webkit-transform: rotateX(25deg);
+          transform: rotateX(25deg);
+}
+
+.purple-credit-card .main-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.purple-credit-card .main-text-container .main {
+  font-size: 2.5em;
+  margin-bottom: 10px;
   color: white;
   font-weight: bold;
 }
