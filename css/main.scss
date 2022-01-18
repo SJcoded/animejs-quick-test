@@ -73,8 +73,28 @@ h1 {
     display: flex;
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 20px;
-    transform: translateX(28px);
-    transform: translateY(28px);
-    transform: rotate(15deg);
+    margin-right: 1000px;
+    transform: rotateX(25deg);
+
+    .main-text-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 20px;
+
+        .main{
+            font-size: 1.5em;
+            color: white;
+            font-weight: bold;
+        }
+
+        .sub{
+            font-size: 1em;
+            color: white;
+            font-weight: normal;
+        }
+    }
 }
 

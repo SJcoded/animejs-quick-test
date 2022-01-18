@@ -1,15 +1,18 @@
 anime({
-    targets: '.arrow',
-  
-      translateY: function(el, i, l) {
-        return  -(l * 10 + (-5 * i));
-      },
-  
-    delay: anime.stagger(100),
-      loop: true,
-    direction: 'alternate',
+  targets: '.arrow',
+
+    translateY: function(el, i, l) {
+      return  -(l * 10 + (-5 * i));
+    },
+
+  delay: anime.stagger(100),
+    loop: true,
+  direction: 'alternate',
 })
 
+
+
+// --------FLY_IN_FLIP_EFFECT_V1--------
 // anime({
 //     targets: '.purple-credit-card',
 //     scale: 1.2,
@@ -17,49 +20,190 @@ anime({
 //         return anime.random(-100, 100),
 //         anime.random(-100, 100)
 //     },
-//     rotate: function (el, i) {
-//         return anime.random(-360, 360)
-//     },
-//     duration: 2000,
+//     translateX: "400px",
+//     rotateX:"25deg",
+//     rotateY: '360deg',
+//     rotate: '15deg',
+//     duration: 4000,
 //     loop: true,
 // })
 
-var tl = anime.timeline({
-    duration: 1000,
-    loop: true,
-    easing: 'linear'
-})
 
-anime.suspendWhenDocumentHidden = false;
+// --------FLY_IN_FLIP_EFFECT_V2_WITH_FLOAT--------
+// anime({
+//     targets: '.purple-credit-card',
+//     scale: {
+//       value: 1.05,
+//       duration: 10000,
+//       easing: "easeInOutElastic(1, 2)",
+//     },
+//     easing: 'easeOutElastic(0.1, .9)',
+//     translateY: {
+//       value: 10,
+//       easing: 'easeInOutElastic(0.1, .5)',
+//       duration: 3000,
+//       delay: 200,
+//     },
+//     translateX: "400px",
+//     rotateX:"35deg",
+//     rotateY: '360deg',
+//     rotate: {
+//       value: '10deg',
+//       duration: 5000,
+//       easing: 'easeInOutElastic(.1, .5)',
+//       delay: 0,
+//       loop: true,
+//     },
+//     duration: 3000,
+//     loop: true,
+// })
 
-tl.add({
-    targets: '.purple-credit-card',
-    scale: 1.05,
-    translateY: 5,
-    rotate: function (el, i) {
-        return anime.random(-5, 5)
-    },
-    translateX: -7
-}).add({
-    targets: '.purple-credit-card',
-    scale: 1.1,
-    translateY: -11,
-    rotate: function (el, i) {
-        return anime.random(-5, 5)
-    },
-    translateX: -10
-}).add({
-    targets: '.purple-credit-card',
-    scale: 1.05,
-    translateY: 17,
-    rotate: function (el, i) {
-        return anime.random(-5, 5)
-    },
-    translateX: 17
-}).add({
-    targets: '.purple-credit-card',
-    scale: 1,
-    translateY: 0,
-    rotate: 0,
-    translateX: 0
-})
+
+
+
+// -------FLOATING_CARD_EFFECT_V1---------
+
+// var tl = anime.timeline({
+//     duration: 1000,
+//     loop: true,
+//     easing: 'linear'
+// })
+
+
+// tl.add({
+//     targets: '.purple-credit-card',
+//     scale: 1.05,
+//     translateY: 5,
+//     rotate: function (el, i) {
+//         return anime.random(-5, 5)
+//     },
+//     translateX: -7
+// }).add({
+//     targets: '.purple-credit-card',
+//     scale: 1.1,
+//     translateY: -11,
+//     rotate: function (el, i) {
+//         return anime.random(-5, 5)
+//     },
+//     translateX: -10
+// }).add({
+//     targets: '.purple-credit-card',
+//     scale: 1.05,
+//     translateY: 17,
+//     rotate: function (el, i) {
+//         return anime.random(-5, 5)
+//     },
+//     translateX: 17
+// }).add({
+//     targets: '.purple-credit-card',
+//     scale: 1,
+//     translateY: 0,
+//     rotate: 0,
+//     translateX: 0
+// })
+
+
+// -------FLOATING_CARD_EFFECT_V2---------
+// var tl = anime.timeline({
+//     duration: 3000,
+//     easing: 'easeOutElastic(0.1, .5)',
+//     loop: true
+//   })
+  
+//   tl.add({
+//     targets: '.purple-credit-card',
+//     scale: 1.2,
+//     translateY: function (el, i) {
+//         return anime.random(-100, 100),
+//         anime.random(-100, 100)
+//     },
+//     translateX: "400px",
+//     rotateX:"45deg",
+//     rotateY: '360deg',
+//     rotate: '15deg',
+//     duration: 2000,
+//   }).add({
+//     targets: '.purple-credit-card',
+//     scale: 1.3,
+//     rotate: '5deg',
+//     duration: 1000,
+//     translateX: "375px",
+//     rotateX:"35deg",
+//     rotateY: '360deg',
+//     easing:"linear",
+//   }, "-=700").add({
+//     targets: '.purple-credit-card',
+//     scale: 1.2,
+//     rotate: '15deg',
+//     duration: 1000,
+//     translateX: "425px",
+//     rotateX:"45deg",
+//     rotateY: '360deg',
+//     easing:"linear", 
+//   }).add({
+//     targets: '.purple-credit-card',
+//     scale: 1.3,
+//     rotate: '5deg',
+//     duration: 1000,
+//     translateX: "375px",
+//     rotateX:"25deg",
+//     rotateY: '360deg',
+//     easing: 'linear',
+//   }).add({
+//     targets: '.purple-credit-card',
+//     scale: 1.2,
+//     rotate: '15deg',
+//     duration: 1000,
+//     translateX: "425px",
+//     rotateX:"25deg",
+//     rotateY: '360deg',
+//     easing: 'linear',
+//   })
+
+// -------FLOATING_CARD_EFFECT_V3---------
+// var tl = anime.timeline({
+//     duration: 3000,
+//     easing: 'easeOutElastic(0.1, .5)',
+//     loop: true
+//   })
+
+//   tl.add({
+//     targets: '.purple-credit-card',
+//     scale: {
+//       value: 1.05,
+//       duration: 7000,
+//       easing: "easeInOutElastic(1, 2)",
+//     },
+//     easing: 'easeOutElastic(0.1, .9)',
+//     translateY: {
+//       value: 10,
+//       easing: 'easeInOutElastic(0.1, .5)',
+//       duration: 3000,
+//       delay: 200,
+//     },
+//     translateX: "400px",
+//     rotateX:"35deg",
+//     rotateY: '360deg',
+//     rotate: {
+//       value: '10deg',
+//       duration: 5000,
+//       easing: 'easeInOutElastic(.1, .5)',
+//       delay: 0,
+//       loop: true,
+//     },
+//     duration: 3000,
+//     loop: true,
+      
+// }).add({
+//     targets: '.purple-credit-card',
+//     scale: {
+//       value: 1.05,
+//       duration: 1000,
+//       easing: "easeInOutElastic(0.1, 2)", 
+//     },
+//     rotate: {
+//       value: '-10deg',
+//       duration: 5000,
+//     },
+// }, "-=3500")
+
